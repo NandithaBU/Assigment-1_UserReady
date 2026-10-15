@@ -167,15 +167,18 @@ Per-field recall = `correct / (correct + incorrect-or-missing)` on exact matches
   `--strict` compares raw strings, `--ignore-case` ignores case.
 * `--errors file.csv` lists every miss (expected vs predicted) for error analysis.
 
+
 ### Results
 
-Aggrement Value          4/10        40.00%
-Aggrement Start Date     4/10        40.00%
-Aggrement End Date       3/10        30.00%
-Renewal Notice (Days)    1/9         11.11%
-Party One                1/10        10.00%
-Party Two                2/10        20.00%
-Macro average                         25.19%
+| Field | Correct Predictions | Accuracy |
+|---|:---:|---:|
+| Agreement Value | 4/10 | 40.00% |
+| Agreement Start Date | 4/10 | 40.00% |
+| Agreement End Date | 3/10 | 30.00% |
+| Renewal Notice (Days) | 1/9 | 11.11% |
+| Party One | 1/10 | 10.00% |
+| Party Two | 2/10 | 20.00% |
+| **Macro Average** | — | **25.19%** |
 
 ## Things worth knowing about the data
 
