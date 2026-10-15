@@ -1,0 +1,22 @@
+# API + local Ollama. After `docker compose up -d`, pull the models once:
+#   docker compose exec ollama ollama pull qwen2.5:7b-instruct
+#   docker compose exec ollama ollama pull qwen2.5vl:7b
+services:
+  ollama:
+    image: ollama/ollama
+    volumes:
+      - ollama:/root/.ollama
+    ports:
+      - "11434:11434"
+  docmeta:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      DOCMETA_BASE_URL: http://ollama:11434/v1
+      DOCMETA_MODEL: ${DOCMETA_MODEL:-qwen2.5:7b-instruct}
+      DOCMETA_VISION_MODEL: ${DOCMETA_VISION_MODEL:-qwen2.5vl:7b}
+    depends_on:
+      - ollama
+volumes:
+  ollama: {}

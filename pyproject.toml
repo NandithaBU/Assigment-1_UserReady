@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "docmeta"
+version = "0.1.0"
+description = "Open-source-LLM metadata extraction from rental/lease agreements (.docx and scanned images)."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "openai>=1.30",
+    "python-docx>=1.1",
+    "pandas>=2.0",
+    "pillow>=10",
+    "click>=8",
+]
+
+[project.optional-dependencies]
+anthropic = ["anthropic>=0.40"]
+ocr = ["pytesseract>=0.3"]
+hf = ["transformers>=4.44", "torch", "accelerate"]
+api = ["fastapi>=0.110", "uvicorn[standard]>=0.29", "python-multipart>=0.0.9"]
+dev = ["pytest>=8"]
+
+[project.scripts]
+docmeta = "docmeta.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
