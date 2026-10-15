@@ -169,14 +169,13 @@ Per-field recall = `correct / (correct + incorrect-or-missing)` on exact matches
 
 ### Results
 
-| Field | Recall |
-|---|---|
-| Agreement Value | _fill in after running_ |
-| Agreement Start Date | |
-| Agreement End Date | |
-| Renewal Notice (Days) | |
-| Party One | |
-| Party Two | |
+Aggrement Value          4/10        40.00%
+Aggrement Start Date     4/10        40.00%
+Aggrement End Date       3/10        30.00%
+Renewal Notice (Days)    1/9         11.11%
+Party One                1/10        10.00%
+Party Two                2/10        20.00%
+Macro average                         25.19%
 
 ## Things worth knowing about the data
 
